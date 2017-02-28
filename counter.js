@@ -21,12 +21,17 @@ var onLoad = function() {
   // 2. listen for click event on the button node and link it to a function called increment
   var button = document.querySelector('.increment');
   button.addEventListener('click', increment);
+  var zero=document.querySelector('.reset');
+  zero.addEventListener('click', reset);
 };
- function increment(){
-   var count = document.querySelector('.count');
-   count.innerHTML++;
+function increment(){
+  var count = document.querySelector('.count');
+  count.innerHTML++;
+}
 
- }
+function reset(){
+  document.querySelector('.count').innerHTML = 0;
+}
 
 
 window.addEventListener('load', onLoad);
